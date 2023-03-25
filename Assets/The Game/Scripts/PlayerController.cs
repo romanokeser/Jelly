@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -38,67 +35,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        GetInput();
+        //GetInput();
         CheckLanding();
         CheckLeftHit();
         CheckRightHit();
         CheckTopHit();
         CheckTouchingWall();
-
-        //landingHit = Physics2D.Raycast(new Vector2(this.transform.position.x, bottomPositionY + transform.position.y), new Vector2(transform.position.x, 0.2f));
-        //leftHit = Physics2D.Raycast(new Vector2(leftPositionX + transform.position.x, this.transform.position.y), new Vector2(leftPositionX - 0.2f, 0.0f), 0.2f);
-        //rightHit = Physics2D.Raycast(new Vector2(rightPositionX + transform.position.x, this.transform.position.y), new Vector2(rightPositionX + 0.2f, 0.0f), 0.2f);
-        //topHit = Physics2D.Raycast(new Vector2(this.transform.position.x, topPositionY + transform.position.y), new Vector2(transform.position.x, 0.2f), 0.2f);
-
-        //Debug.DrawRay(new Vector2(rightPositionX + transform.position.x, this.transform.position.y), new Vector2(rightPositionX + 0.2f, 0.0f), Color.black);
-
-        ////Debug.Log(leftHit.collider.tag);
-        //if (landingHit.collider.tag == "floor")
-        //{
-        //    allowedToJump = true;
-        //    Debug.Log("Hit the floor");
-        //}
-        //if (topHit.collider != null)
-        //{
-        //    if (topHit.collider.tag == "floor")
-        //    {
-        //        allowedToJump = false;
-        //        Debug.Log("Hit the top");
-        //    }
-        //}
-        //if (leftHit.collider != null)
-        //{
-        //    if (leftHit.collider.tag == "wall")
-        //    {
-
-        //        touchingWall = true;
-        //    }
-
-        //}
-
-
-        //if (rightHit.collider != null)
-        //{
-        //    if (rightHit.collider.tag == "wall")
-        //    {
-        //        touchingWall = true;
-        //    }
-        //}
-
-        //if (rightHit.collider == null && leftHit.collider == null)
-        //{
-        //    touchingWall = false;
-        //}
-
-        //if (touchingWall)
-        //{
-        //    allowedToJump = true;
-        //}
-
-        /*   Debug.DrawRay(new Vector2(this.transform.position.x, bottomPositionY + transform.position.y), new Vector2(0, -0.5f), Color.red);
-           Debug.DrawRay(new Vector2(this.transform.position.x, topPositionY + transform.position.y), new Vector2(0, 0.2f), Color.red);
-           Debug.DrawRay(new Vector2(leftPositionX + transform.position.x, this.transform.position.y), new Vector2(leftPositionX - 0.2f, 0), Color.red);
-           Debug.DrawRay(new Vector2(rightPositionX + transform.position.x, this.transform.position.y), new Vector2(0.2f, 0), Color.red);*/
     }
 
     private void CheckTouchingWall()
